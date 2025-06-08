@@ -78,4 +78,4 @@ git clone https://github.com/Tiiffi/mcrcon && cd mcrcon && make && sudo install 
 mcrcon -H 127.0.0.1 -P $MC_RCON_PORT -p StrongPass123
 ```
 внутри RCON
-```bash /datapack list ```
+```/datapack list ```
