@@ -68,21 +68,14 @@ docker logs -f lp_forge_server
 📁  Шаг 7. После первого запуска скопируй datapacks
 ```bash
 WORLD="LP_SERVER/${MC_LEVEL_NAME:-world}"
-mkdir -p "$WORLD/datapacks"
 cp -vn LP_SERVER/datapacks/* "$WORLD/datapacks/"
 docker restart lp_forge_server
 ```
 
-🧩  Шаг 8. Проверка datapacks
-# внутри игры или в docker attach
-/datapack list
-
-🔑  Шаг 9. RCON (опц.)
+🔑  Шаг 8. RCON (опц.)
 ```bash
 git clone https://github.com/Tiiffi/mcrcon && cd mcrcon && make && sudo install mcrcon /usr/local/bin
 mcrcon -H 127.0.0.1 -P $MC_RCON_PORT -p StrongPass123
 ```
-# пример: /say 
-Проверка datapacks
-# внутри RCON
-/datapack list
+внутри RCON
+```bash /datapack list ```
